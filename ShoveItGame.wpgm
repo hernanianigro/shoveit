@@ -1,0 +1,14 @@
+import wollok.game.*
+import niveles.*
+import shoveit.*
+
+program ShoveItGame {
+	game.title("Shove it")
+	game.height(10)
+	game.width(14)
+	nivel1.cargar()
+    const musica = game.sound("mainBMG.mp3")
+    musica.shouldLoop(true)
+    game.schedule(500, {musica.play()} )
+	game.start()
+}
